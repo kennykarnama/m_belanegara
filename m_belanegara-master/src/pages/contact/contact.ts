@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import {DetailLaguWajibPage} from '../detail-lagu-wajib/detail-lagu-wajib';
 
 @Component({
   selector: 'page-contact',
@@ -25,6 +26,13 @@ searchQuery: string = '';
 
      this.loadLaguWajib();
 
+  }
+
+  getDetailLaguWajib(item){
+
+    console.log(item);
+
+    this.navCtrl.push(DetailLaguWajibPage,{data:item});
   }
 
    loadLaguWajib(){

@@ -10,7 +10,7 @@
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 
 <ion-list inset *ngIf="laguWajib && laguWajib.length">
- <button ion-item *ngFor="let item of laguWajib" (click)="itemSelected(item)">
+ <button ion-item *ngFor="let item of laguWajib" (click)="getDetailLaguWajib(item)">
     <h3>{{ item.judul_lagu_wajib }}</h3>
     <p>Oleh: {{item.nama_pengarang_lagu}}</p>
     <p>Nada Dasar: {{item.nada_dasar}} ~ Ketukan: {{item.ketukan}}</p>
