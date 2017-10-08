@@ -1,0 +1,88 @@
+<style type="text/css">
+  img{
+    max-width:100%;
+    max-height:100%;
+  }
+
+  .square {
+    height: 200px;
+    width: 100%;
+}
+</style>
+<ion-content padding>
+<img  src="../../assets/images/logo_web_BN4.png" alt="">
+
+ <ion-slides *ngIf="headlineNews && headlineNews.length"  pager="false" autoplay="1000" loop="true" speed="1000" style="height: auto;">
+
+    <ion-slide *ngFor="let item of headlineNews" style="color:black" >
+    
+
+      <img class="square" src="{{item.featured_image}}" >
+      <ion-item text-wrap>
+        <p style="font-weight: bold;">{{item.judul}}</p>
+      </ion-item>
+   
+    </ion-slide >
+
+
+ </ion-slides>
+
+ 
+<ion-card style="background-color:red" *ngIf="nBerita && nBerita.length">
+  <ion-card-header>
+    <h1 style="text-align:center">Berita</h1>
+  </ion-card-header>
+
+    <ion-list>
+
+      <ion-item text-wrap *ngFor="let item of nBerita">
+        <ion-thumbnail item-start>
+          <img src="{{item.featured_image}}" style="size:100%">
+        </ion-thumbnail>
+        <h2>{{item.judul}}</h2>
+        <p>{{item.username}}</p>
+    <!-- <button ion-button clear item-end>View</button> -->
+        </ion-item>
+
+
+      <ion-item style="text-align:center">
+          <button ion-button  color="danger" outline >
+            Selengkapnya...
+          </button>
+      </ion-item>
+
+   </ion-list>
+
+ 
+</ion-card>
+
+<ion-card style="background-color:red" *ngIf="nArtikel && nArtikel.length">
+  <ion-card-header>
+    <h1 style="text-align:center">Artikel</h1>
+  </ion-card-header>
+
+  <ion-list>
+  
+  <ion-item text-wrap *ngFor="let item of nArtikel">
+    
+    <h2>{{item.judul_artikel}}</h2>
+    <p>{{item.username}}</p>
+    <!-- <button ion-button clear item-end>View</button> -->
+  </ion-item>
+ 
+  <ion-item style="text-align:center"><button ion-button  color="danger" outline >
+  Selengkapnya...
+</button>
+</ion-item>
+
+</ion-list>
+
+</ion-card>
+
+    
+    <h3 style="text-align:center">Contacts</h3>
+<p style="text-align:center">E-mail: <a href="cs@belanegaraku.id">cs@belanegaraku.id</a></p>
+<p style="text-align:center">Jl. Jend Sudirman No.7, Antasan Besar, <br>Banjarmasin Tengah, Kota Banjarmasin, <br>Kalimantan Selatan 70123</p>
+<img src="../../assets/images/footer.png" style="size:100%;padding:0px;margin:0px;width: 100%;" alt="">
+
+</ion-content>
