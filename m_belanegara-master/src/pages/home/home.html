@@ -14,7 +14,7 @@
 
  <ion-slides *ngIf="headlineNews && headlineNews.length"  pager="false" autoplay="1000" loop="true" speed="1000" style="height: auto;">
 
-    <ion-slide *ngFor="let item of headlineNews" style="color:black" >
+    <ion-slide *ngFor="let item of headlineNews" (click)="getDetailBerita(item,'Headline News')" style="color:black" >
     
 
       <img class="square" src="{{item.featured_image}}" >
@@ -35,7 +35,7 @@
 
     <ion-list>
 
-      <ion-item text-wrap *ngFor="let item of nBerita">
+      <ion-item text-wrap *ngFor="let item of nBerita" (click)="getDetailBerita(item,'Berita')" >
         <ion-thumbnail item-start>
           <img src="{{item.featured_image}}" style="size:100%">
         </ion-thumbnail>
