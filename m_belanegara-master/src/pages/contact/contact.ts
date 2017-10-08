@@ -28,34 +28,16 @@ searchQuery: string = '';
   }
 
    loadLaguWajib(){
-       this.http.get('http://www.belanegaraku.id/m/index.php/Berita/fetch_headline_news')
+       this.http.get('http://www.belanegaraku.id/m/index.php/Lagu_Wajib/fetch_all_lagu_wajib')
       .map(res => res.json())
       .subscribe(data => 
       {
-         this.laguWajib = data;   
+         this.laguWajib = data;     
+         console.log(this.laguWajib);
              
       });
    }
 
-
-  // initializeItems() {
-
-  
-
-  //   this.items = [
-  //     {judul_lagu:"Api Kemerdekaan",pengarang:"Djoko Lelono",nada_dasar:"C",ketukan:"3 1/4"},
-  //     {judul_lagu:"Bagi Mu Negeri",pengarang:"Kusbini",nada_dasar:"C",ketukan:"4/4"},
-  //     {judul_lagu:"Bangun Pemudi Pemuda",pengarang:"Alfred Simanjuntak",nada_dasar:"G",ketukan:"4/4"},
-  //     {judul_lagu:"Bendera Merah Putih",pengarang:"Ibu Soed",nada_dasar:"F",ketukan:"4/4"},
-  //     {judul_lagu:"Berkibarlah Bendera Ku",pengarang:"Ibu Soed",nada_dasar:"G",ketukan:"4/4"},
-  //     {judul_lagu:"Bhinneka Tunggal Ika",pengarang:"Binsar Sitompul",nada_dasar:"F",ketukan:"4/4"},
-  //     {judul_lagu:"Dari Sabang Sampai Merauke",pengarang:"R. Soerardjo",nada_dasar:"C",ketukan:"4/4"},
-  //     {judul_lagu:"Di Timur Matahari",pengarang:"Djoko Lelono",nada_dasar:"C",ketukan:"3 1/4"},
-
-  //   ];
-
-
-  // }
 
 
 
@@ -71,15 +53,15 @@ searchQuery: string = '';
 
 
     // // if the value is an empty string don't filter the items
-    if (val && val.trim() != '') {
-      this.items = this.items.filter((v:any) => {
+    // if (val && val.trim() != '') {
+    //   this.items = this.items.filter((v:any) => {
 
     
 
-        return (v.judul_lagu.toLowerCase().indexOf(val.toLowerCase()) > -1);
+    //     return (v.judul_lagu_wajib.toLowerCase().indexOf(val.toLowerCase()) > -1);
        
-      })
-    }
+    //   })
+    // }
   }
 
 }

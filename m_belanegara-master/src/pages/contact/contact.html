@@ -11,8 +11,8 @@
 
 <ion-list inset *ngIf="laguWajib && laguWajib.length">
  <button ion-item *ngFor="let item of laguWajib" (click)="itemSelected(item)">
-    <h3>{{ item.judul_lagu }}</h3>
-    <p>Oleh: {{item.pengarang}}</p>
+    <h3>{{ item.judul_lagu_wajib }}</h3>
+    <p>Oleh: {{item.nama_pengarang_lagu}}</p>
     <p>Nada Dasar: {{item.nada_dasar}} ~ Ketukan: {{item.ketukan}}</p>
   </button>
 </ion-list>
