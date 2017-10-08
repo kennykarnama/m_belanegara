@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import { NavController} from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map'; 
+import {DetailBeritaPage} from '../detail-berita/detail-berita';
 
 @Component({
   selector: 'page-home',
@@ -30,6 +31,16 @@ export class HomePage {
 
     this.loadNArtikel();
 
+  }
+
+  getDetailBerita(item,str:string){
+
+   this.navCtrl.push(DetailBeritaPage,{
+     data:item,
+     title:str
+   });
+
+    console.log(item);
   }
 
  
