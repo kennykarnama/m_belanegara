@@ -43,6 +43,10 @@ export class HomePage {
     console.log(item);
   }
 
+  selectTab(index){
+    this.navCtrl.parent.select(index);
+  }
+
  
 
   loadHeadlineNews(){

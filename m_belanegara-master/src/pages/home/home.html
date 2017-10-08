@@ -45,8 +45,8 @@
         </ion-item>
 
 
-      <ion-item style="text-align:center">
-          <button ion-button  color="danger" outline >
+      <ion-item text-center>
+          <button ion-button  color="danger" outline  (click)="selectTab(1)">
             Selengkapnya...
           </button>
       </ion-item>
@@ -70,7 +70,8 @@
     <!-- <button ion-button clear item-end>View</button> -->
   </ion-item>
  
-  <ion-item style="text-align:center"><button ion-button  color="danger" outline >
+  <ion-item style="text-align:center" (click)="selectTab(2)">
+  <button ion-button  color="danger" outline  >
   Selengkapnya...
 </button>
 </ion-item>
