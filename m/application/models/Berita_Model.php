@@ -178,7 +178,7 @@ class Berita_Model extends CI_Model
 		//$this->db->where_not_in('id',$id);
 
 
-		$this->db->select('berita.id as `id_berita`, berita.judul as `judul`, berita.waktu as `waktu`, berita.status as `status`, berita.viewer as `viewer`,user.username as `username`,berita.featured_image as `featured_image`,berita.konten as `konten_berita`');
+		$this->db->select('berita.id as `id_berita`, berita.judul as `judul`, berita.waktu as `waktu`, berita.status as `status`, berita.viewer as `viewer`,user.username as `username`,berita.featured_image as `featured_image`,berita.konten as `konten_berita`,berita.konten as `konten`');
 
 
 
